@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Google font links -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap"
+      rel="stylesheet"
+    /> -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+      body {
+        /* background-color: lightgray; */
+        /* background: lightgray; */
+      }
+      /* Internal css */
+      /* #second-p {
+        color: red;
+      }
+      .second-p {
+        color: purple;
+      } */
+      p {
+        /* rgb color */
+        /* color: rgb(235, 153, 30); */
+        /* you can also use rgba to control the opacity of color */
+        /* color: rgba(235, 153, 30, 0.1); */
+      }
+      h1 {
+        /* hexadecimal color */
+        color: #048787;
+      }
+      body {
+        /* color name */
+        color: gray;
+      }
+      /* 
+        Summary:
+            - Specificity order: id > class > element
+      */
+
+      /* #box1,
+      #box2,
+      .box3 {
+        color: lightgreen;
+      } */
+
+      /* * {
+        color: red;
+      } */
+
+      /* :root {
+        store values in here
+        --bgColor: blue;
+      }
+
+      body {
+        background-color: var(--bgColor);
+      }
+
+      p {
+        color: var(--bgColor);
+      } */
+
+      .units {
+        font-size: 20px;
+      }
+      #p-one {
+        /* 32px */
+        font-size: 2em;
+      }
+      #p-two {
+        /* 32px */
+        font-size: 2rem;
+      }
+
+      main {
+        /* background-color: rgb(28, 29, 29); */
+        height: 100vh;
+        width: 100vw;
+        /* font-family: "Courier New", Courier, monospace; */
+        /* font-family: "Times New Roman", Times, serif; */
+        /* font-family: cursive; */
+        /* font-family: "Delicious Handrawn", cursive; */
+        /* font-family: "Nabla", cursive; */
+        font-family: "Noto Sans JP", sans-serif;
+      }
+
+      /* this makes all the p children of container red */
+      /* .container  p {
+        color: red;
+      } */
+
+      /* this only makes direct children red */
+      .container > p {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>CSS Basics</h1>
+
+      <!-- inline css: fastest predesence is the highest-->
+      <p>This is inline styled element</p>
+      <p id="second-p" class="second-p">This is inline styled element second</p>
+      <p class="third-p">This is inline styled element third</p>
+      <p style="color: blueviolet">This is inline styled element</p>
+      <p style="color: blueviolet">This is inline styled element</p>
+      <p style="color: blueviolet">This is inline styled element</p>
+      <p style="color: blueviolet">This is inline styled element</p>
+      <p style="color: blueviolet">This is inline styled element</p>
+
+      <!-- group selectors -->
+      <div class="box">
+        <p id="box1">Box 1</p>
+        <div id="box2">Box 2</div>
+        <span class="box3">Box 3</span>
+      </div>
+
+      <!-- units -->
+      <h1>Units</h1>
+      <pre>
+        px
+        em
+        rem
+        percentage
+    </pre
+      >
+
+      <!-- 
+        1 em = 16px (relative parent elements size)
+        1 rem = 16px (relative to body/root size)
+        100% = 16px
+     -->
+      <div class="units">
+        <p id="p-one">Em text one</p>
+        <p id="p-two">Rem text two</p>
+      </div>
+
+      <!-- Descendent selectors -->
+      <h1>Descendent selectors</h1>
+
+      <div class="container">
+        <!-- Make only these (first child) p elements color red -->
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit,
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit,
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit,
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit,
+        </p>
+        <div>
+          <p>Lorem ipsum dolor sit amet.</p>
+          <p>Lorem ipsum dolor sit amet.</p>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
