@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Box Model</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 20px;
+        background-color: aqua;
+        /* padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 20px;
+            padding-right: 20px; */
+        padding: 20px 5px 20px 20px;
+        /* border-width: 5px;
+        border-style: solid;
+        border-color: blue; */
+        border: solid 10px orange;
+        /* margin-left: 50px;
+        margin-top: 50px;
+        margin-right: 50px; */
+        /* margin: 50px; */
+        text-align: center;
+        text-justify: center;
+        border-radius: 10px;
+      }
+
+      a:link {
+        color: red;
+        font-size: xx-large;
+      }
+
+      a:visited {
+        color: green;
+      }
+
+      a:hover {
+        color: blue;
+        opacity: 20%;
+      }
+
+      a:active {
+        color: aqua;
+      }
+
+      :root {
+        background-color: beige;
+      }
+
+      ul li:first-child {
+        background-color: blueviolet;
+      }
+
+      ul li:last-child {
+        background-color: chocolate;
+      }
+
+      ul li:nth-child(even) {
+        background-color: aquamarine;
+      }
+
+      span::before {
+        content: "School name is - ";
+      }
+
+      span::after {
+        content: " - it's in Chicago";
+      }
+
+      #lorem::first-line {
+        color: red;
+      }
+
+      #lorem::first-letter {
+        /* color: red; */
+        font-size: 36px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Box Model</h1>
+      <div class="box">BOX</div>
+    </div>
+    <hr>
+    <div>
+      <h1>Pseudo Classes</h1>
+      <a href="https://www.kirklandsig.com">Unvisited Link</a>
+      <br>
+      <a href="https://www.twitter.com">Visited Link</a>
+    </div>
+    <div>
+        <ul>
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+        </ul>
+    </div>
+    <div>
+        <h2>Pseudo Elements</h2>
+        <span>Tech Global</span>
+        <hr>
+        <div id="lorem">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium voluptates exercitationem quisquam, harum odio voluptatum maxime ad, modi beatae ipsam nam adipisci vel delectus. Expedita doloribus consequatur architecto distinctio repellendus.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium voluptates exercitationem quisquam, harum odio voluptatum maxime ad, modi beatae ipsam nam adipisci vel delectus. Expedita doloribus consequatur architecto distinctio repellendus.
+        </div>
+    </div>
+  </body>
+</html>
