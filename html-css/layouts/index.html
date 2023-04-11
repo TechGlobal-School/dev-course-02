@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+      }
+      h1 {
+        background: lightblue;
+        display: none;
+        /* visibility: hidden; */
+        /* opacity: 0; */
+        /* display: inline; - not reccomended */
+      }
+      p {
+        background: rgb(38, 114, 114);
+        /* display: inline; - not reccomended */
+      }
+      /* div {
+        background: lightcoral;
+      }
+      */
+      #span {
+        background: orange;
+        margin-top: 10px;
+        height: 100px;
+        width: 200px;
+      }
+      #lorem {
+        background-color: lightgreen;
+        margin-right: 30px;
+        height: 50px;
+        width: 200px;
+        display: inline-block;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+        By default: p, h1 => have some margins
+        div, span => don't have margins
+
+        div, p, h1 => they start from left until the end of the page => block element
+
+        inline-block elements - mostly form element 
+        - they exactly same as inline elements but height, wdith and vertical margins don't works works on them
+     -->
+    <h1>Layouts</h1>
+
+    <p>This is a block element p</p>
+
+    <div>This is a block element div</div>
+
+    <span id="span">This is inline element span</span>
+    <a href="#">This is an inline element a</a>
+    <img src="http://www.google.com" alt="some" />
+
+    <p><span id="lorem">Lorem</span> ipsum dolor sit amet.</p>
+  </body>
+</html>
