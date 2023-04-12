@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      tr {
+        /* 
+        => doesn't work to tr
+        border: 1px solid red; 
+        padding: 10px;
+        margin: 10px;
+        */
+        /* background-color: rgb(154, 190, 130); */
+      }
+      table {
+        border: 2px solid darkolivegreen;
+        padding: 5px;
+        margin-left: 20px;
+        width: 400px;
+        /* background-color: blanchedalmond; */
+        border-collapse: collapse;
+        /* border-style: dashed; */
+        /* text-indent: 10px; */
+        text-align: left;
+        /* border spacing has no effect on collapsed borders */
+        /* border-spacing: 20px; */
+      }
+      th {
+        border: 1px solid;
+        padding: 5px;
+        /* margin: 5px; */
+        /* background-color: aqua; */
+      }
+      td {
+        border: 1px solid;
+        padding: 5px;
+        margin: 5px;
+        /* background-color: aquamarine; */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- thead, tbody, tfoot - optional elements -->
+    <h1>Tables</h1>
+
+    <table>
+      <!-- header -->
+      <thead>
+        <tr>
+          <th>Country</th>
+          <th>Population</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>USA</td>
+          <td>400 000</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Nigeria</td>
+          <td>40 000</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <h4>Colspan and horizontal table</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>Country</th>
+          <th colspan="2">Population (min - max)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>USA</td>
+          <td>200 000</td>
+          <td>500 000</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Nigeria</td>
+          <td>20 000</td>
+          <td>50 000</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <!-- for rowspan to work, they need be inside same element -->
+    <h4>Colspan and vertical table</h4>
+    <table>
+      <!-- <thead> -->
+      <tr>
+        <th>Country</th>
+        <td>USA</td>
+        <td>Nigeria</td>
+      </tr>
+      <!-- </thead>
+      <tbody> -->
+      <tr>
+        <th rowspan="2">Population (min - max)</th>
+        <td>200 000</td>
+        <td>20 000</td>
+      </tr>
+      <!-- </tbody>
+      <tfoot> -->
+      <tr>
+        <td>500 000</td>
+        <td>50 000</td>
+      </tr>
+      <!-- </tfoot> -->
+    </table>
+
+    <h4>Colgroup and col</h4>
+    <table>
+      <colgroup>
+        <col span="1" style="background-color: lightgreen" />
+        <col span="1" style="background-color: yellow" />
+        <col span="1" style="background-color: lightblue" />
+      </colgroup>
+      <tr>
+        <th>Country</th>
+        <td>USA</td>
+        <td>Nigeria</td>
+      </tr>
+      <tr>
+        <th>Population (min - max)</th>
+        <td>200 000</td>
+        <td>20 000</td>
+      </tr>
+    </table>
+  </body>
+</html>

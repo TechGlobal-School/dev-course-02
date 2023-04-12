@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      *::before {
+        box-sizing: border-box;
+      }
+      *::after {
+        box-sizing: border-box;
+      }
+      form {
+        border: 1px solid;
+        width: 300px;
+        padding: 8px;
+      }
+      div {
+        margin-bottom: 10px;
+      }
+      label {
+        /* width: 100%; */
+        /* display: block; */
+        /* border: 1px solid darkgoldenrod; */
+      }
+      input {
+        /* width: 100%; */
+        padding: 5px;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[type="number"] {
+        width: 100%;
+      }
+      /* label::after {
+        content: "===";
+        color: black;
+      } */
+    </style>
+  </head>
+  <body>
+    <h1>Forms</h1>
+    <form>
+      <div>
+        <label for="fname">Name</label>
+        <input type="text" id="fname" />
+        <!-- <input type="text" id="fname" placeholder="First Name" /> -->
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" required />
+        <!-- <input type="email" placeholder="Email" /> -->
+      </div>
+      <div>
+        <label for="pass">Password</label>
+        <input type="password" id="pass" />
+        <!-- <input type="password" pattern="[1-9][a-z]"/> -->
+      </div>
+      <div>
+        <label for="age">Age</label>
+        <input type="number" min="18" max="90" maxlength="2" />
+      </div>
+      <div>
+        <p>Your favorite colors?</p>
+        <label for="green"> Green </label>
+        <input type="checkbox" id="green" />
+        <label for="green"> Purple </label>
+        <input type="checkbox" id="purple" />
+        <label for="green"> Yellow </label>
+        <input type="checkbox" id="yellow" />
+      </div>
+
+      <div>
+        <label for="colors">Choose your color?</label>
+        <input type="color" />
+      </div>
+
+      <div>
+        <label for="date">Your dob?</label>
+        <input type="date" />
+        <!-- <input type="date" min="2023-04-10"/> -->
+      </div>
+
+      <div>
+        <label for="resume">Upload your resume</label>
+        <input type="file" />
+      </div>
+
+      <div>
+        <p>Are you coming to school tomorrow?</p>
+        <label for="yes">Yes</label>
+        <input type="radio" id="yes" name="attendance" />
+        <label for="no">No</label>
+        <input type="radio" id="no" name="attendance" />
+      </div>
+
+      <div>
+        <textarea
+          cols="30"
+          rows="15"
+          placeholder="Write essay under 100 words"
+          maxlength="100"
+        ></textarea>
+      </div>
+
+      <div>
+        <label for="products">Products</label>
+        <select id="products" name="products">
+          <option value="furniture">Furniture</option>
+          <option value="tables">Tables</option>
+          <option value="tv-stands">TV Stands</option>
+        </select>
+      </div>
+      <div>
+        <p contenteditable="true">Update this text</p>
+      </div>
+      <!-- no difference between input type submit and button -->
+      <div>
+        <input type="submit" />
+        <button disabled>Submit</button>
+      </div>
+    </form>
+    <br />
+    <br />
+    <br />
+    <br />
+  </body>
+</html>
