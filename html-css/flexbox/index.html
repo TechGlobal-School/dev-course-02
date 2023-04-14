@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      #container {
+        width: 300px;
+        height: 300px;
+        border: 1px solid;
+        padding-left: 125px;
+        /* padding-top: 128px; */
+        margin-bottom: 20px;
+      }
+      nav {
+        width: 400px;
+        height: 200px;
+        border: 1px solid red;
+      }
+      nav div {
+        border: 1px solid;
+        display: inline-block;
+        padding: 10px;
+        /* margin-right: 20px; */
+        width: calc(380px / 4);
+        vertical-align: center;
+      }
+      nav div:nth-child(2) {
+        height: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Challenges before Flexbox</h1>
+
+    <div id="container">
+      <p>Text</p>
+    </div>
+
+    <nav>
+      <div>Page 1</div>
+      <div>Page 2</div>
+      <div>Page 3</div>
+      <div>Page 4</div>
+    </nav>
+  </body>
+</html>

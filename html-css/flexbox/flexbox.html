@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        /* container */
+        border: 1px solid green;
+        height: 400px;
+        width: 600px;
+        display: flex;
+
+        flex-direction: row;
+        /* flex-direction: column; */
+        /* flex-direction: row-reverse; */
+        /* flex-direction: column-reverse; */
+        /* flex-wrap: nowrap; */
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        /* justify-content: center; */
+        /* justify-content: flex-end;
+        justify-content: space-between;
+        justify-content: space-around;
+        justify-content: space-evenly; */
+
+        /* align-items: stretch; */
+        /* align-items: flex-start; */
+        align-items: center;
+        /* align-items: flex-end; */
+        /* align-items: baseline; */
+
+        /* align-content: flex-start;
+        align-content: flex-end;
+        align-content: center;
+        align-content: space-around;
+        align-content: space-between; */
+      }
+      .container > div {
+        border: 1px solid;
+        padding: 10px;
+        /* width: 120px; */
+        /* height: 40px; */
+        /* items */
+        float: right;
+      }
+
+      .container div:nth-child(1) {
+        /* order: 4; */
+        /* flex-grow: 1; */
+        /* flex-shrink: 2; */
+        /* flex-basis: 100px; */
+        /* flex: 1 100px; */
+        /* flex: flex-grow flex-shrink ? || flex-basis */
+        align-self: end;
+      }
+      .container div:nth-child(2) {
+        /* font-size: 30px; */
+        /* order: 3; */
+        /* flex-grow: 1; */
+        /* flex-shrink:  */
+        /* flex-basis: 200px; */
+        /* flex: 1 100px; */
+      }
+      .container div:nth-child(3) {
+        /* order: 1; */
+        /* flex-grow: 1; */
+        /* flex-basis: 100px; */
+        /* flex: 1 200px; */
+        align-self: flex-start;
+      }
+      .container div:nth-child(4) {
+        /* font-size: 60px; */
+        /* order: 2; */
+        /* flex-grow: 1; */
+        /* flex: 1 150px; */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Flexbox</h1>
+
+    <div class="container">
+      <div>flex item 1</div>
+      <div>flex item 2</div>
+      <div>flex item 3</div>
+      <div>flex item 4</div>
+      <!-- <div>flex item 4</div>
+      <div>flex item 4</div>
+      <div>flex item 4</div>
+      <div>flex item 4</div>
+      <div>flex item 4</div>
+      <div>flex item 4</div> -->
+      <!-- <div>Text</div> -->
+    </div>
+  </body>
+</html>
