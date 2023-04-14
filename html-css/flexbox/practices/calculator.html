@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .main-container {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        font-size: 50px;
+        padding: 5px;
+        background-color: black;
+      }
+
+      .upper {
+        color: white;
+        height: 100px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+      }
+
+      .lower {
+        display: flex;
+      }
+
+      .left {
+        display: flex;
+        flex: 0 1 50%;
+        flex-wrap: wrap;
+        gap: 1px;
+      }
+
+      .left > span {
+        background-color: orange;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .right {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        flex: 0 1 50%;
+        gap: 1px;
+        height: 504px;
+      }
+
+      .right > span {
+        background-color: orange;
+        height: 100px;
+        width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .normal {
+        flex: 0 1 calc(50% - 1px);
+      }
+
+      .grow {
+        flex: 0 1 calc(100% - 1px);
+      }
+
+      .grow-right {
+        flex-basis: calc(40% - 1px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="upper">
+        <span>0</span>
+      </div>
+      <div class="lower">
+        <div class="left">
+          <span class="grow pink" style="background-color: pink">AC</span>
+          <span class="normal">7</span>
+          <span class="normal">8</span>
+          <span class="normal">4</span>
+          <span class="normal">5</span>
+          <span class="normal">1</span>
+          <span class="normal">2</span>
+          <span class="grow">0</span>
+        </div>
+        <div class="right">
+          <span style="background-color: darkgray">/</span>
+          <span>9</span>
+          <span>6</span>
+          <span>3</span>
+          <span>.</span>
+          <span style="background-color: darkgray">X</span>
+          <span style="background-color: darkgray">-</span>
+          <span style="background-color: darkgray">+</span>
+          <span class="grow-right" style="background-color: blue">=</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

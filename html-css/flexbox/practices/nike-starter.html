@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+
+        .main-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+      .main-container > div {
+        /* Remove after finising */
+        border: 5px solid black;
+      }
+
+      .box-container {
+        display: flex;
+        justify-content: space-around;
+      }
+      .box {
+        flex-basis: 33%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+      }
+
+      .box h3, p {
+        margin: 0;
+      }
+
+      .shoe-container {
+        display: flex;
+      }
+      
+      .shoe-image {
+        background-color: blue;
+        flex: 2 1 67%;
+      }
+      .shoe-model {
+        background-color: red;
+        flex: 1 1 33%;
+      }
+
+      
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="title-container">title-container</div>
+      <div class="box-container">
+        <div class="box">
+          <h3>Box</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
+            possimus?
+          </p>
+        </div>
+        <div class="box">
+          <h3>Box</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
+            possimus?
+          </p>
+        </div>
+        <div class="box">
+          <h3>Box</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
+            possimus?
+          </p>
+        </div>
+      </div>
+      <div class="shoe-container">
+        <div class="shoe-image">IMAGE - ipsum dolor, sit amet consectetur adipisicing elit. Molestias libero dolorum odit pariatur a eos laboriosam tenetur, cum consequatur praesentium temporibus, aliquam fugit aut? Amet assumenda corrupti deserunt necessitatibus culpa!</div>
+        <div class="shoe-model">AIR MAX - ipsum dolor sit amet consectetur adipisicing elit. Nostrum fugiat sapiente vel libero accusantium, ipsa nulla nam consequatur cumque, reprehenderit minus aut velit facere! Assumenda aliquam libero velit optio impedit?</div>
+      </div>
+      <div class="details-container">
+        <div class="legendary">legendary</div>
+        <div class="product-details">product-details</div>
+      </div>
+      <div class="warning-container">warning-container</div>
+    </div>
+  </body>
+</html>
