@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* MOBILE FIRST APPROACH */
+      /* 
+        on mobile i want blue and white colors
+        on tablet i want red and black
+        on desktop i want gray and yellow colors
+      */
+
+      /* MOBILE STYLES */
+      /* body {
+        background-color: blue;
+        color: #fff;
+      }
+
+      @media screen and (min-width: 768px) {
+        body {
+          background-color: red;
+          color: black;
+        }
+      }
+
+      @media screen and (min-width: 1200px) {
+        body {
+          background-color: gray;
+          color: yellow;
+        }
+      } */
+
+      /* RESPONSIVE WEB DESIGN */
+      /* 
+        on desktop i want gray and yellow colors
+        on tablet i want red and black
+        on mobile i want blue and white colors
+      */
+      body {
+        background-color: gray;
+        color: yellow;
+      }
+      img {
+        display: inline-block;
+      }
+      h1 {
+        font-size: 28px;
+      }
+
+      /* @media screen and (min-width: 600px) and (max-width: 700px) {
+        body {
+          background-color: aqua;
+        }
+      } */
+
+      @media screen and (max-width: 768px) {
+        body {
+          background-color: red;
+          color: black;
+        }
+        img {
+          display: none;
+        }
+        h1 {
+          font-size: 22px;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        body {
+          background-color: blue;
+          color: white;
+        }
+        img {
+          display: none;
+        }
+        h1 {
+          font-size: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>RWB</h1>
+    <img
+      src="https://www.seiu1000.org/sites/main/files/main-images/camera_lense_0.jpeg"
+      width="500px"
+      height="auto"
+    />
+  </body>
+</html>

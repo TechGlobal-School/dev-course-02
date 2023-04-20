@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* common */
+      body {
+        padding: 10px;
+        background-color: rgb(215, 203, 187);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      /* MOBILE STYLES */
+      /* #container {
+        background-color: white;
+        padding: 10px;
+        width: 90%;
+        margin: 20px auto;
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(3, 200px);
+        gap: 20px 0;
+      }
+      section {
+        width: 96%;
+        border: 1px solid;
+        margin: 0 auto;
+        border-radius: 10px;
+        padding: 10px;
+      } */
+
+      /* @media screen and (min-width: 768px) {
+        #container {
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: 1fr;
+          gap: 20px;
+          height: 400px;
+        }
+      } */
+
+      /* ------ RWB -------- */
+
+      #container {
+        background-color: white;
+        padding: 10px;
+        width: 90%;
+        margin: 20px auto;
+        border-radius: 10px;
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        gap: 20px;
+        height: 400px;
+      }
+      section {
+        width: 96%;
+        border: 1px solid;
+        margin: 0 auto;
+        border-radius: 10px;
+        padding: 10px;
+      }
+      @media screen and (max-width: 768px) {
+        #container {
+          grid-template-columns: auto;
+          grid-template-rows: repeat(3, 200px);
+          gap: 20px 0;
+          height: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main id="container">
+      <section>Box 1</section>
+      <section>Box 2</section>
+      <section>Box 3</section>
+    </main>
+  </body>
+</html>
