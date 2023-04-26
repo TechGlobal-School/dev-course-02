@@ -1,0 +1,54 @@
+/* -----  VARIABLES ----- */ /* -----  MIXINS ----- */
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  line-height: 1.5;
+}
+
+h1 {
+  color: orangered;
+}
+
+p {
+  color: gray;
+}
+
+/* -----  NESTING ----- */
+nav {
+  background-color: lightgray;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+nav ul li {
+  padding: 10px;
+  font-weight: bold;
+}
+
+/* -----  EXTENDS/INHERITENCE ----- */
+.error, .warning, .success {
+  padding: 10px 20px;
+  color: #333;
+}
+
+.success {
+  border: 2px solid green;
+  background-color: green;
+  box-shadow: 0 0 1px rgba(0, 128, 0, 0.25);
+  color: #fff;
+}
+
+.warning {
+  border: 2px solid yellow;
+  background-color: yellow;
+  box-shadow: 0 0 1px rgba(255, 255, 0, 0.25);
+  color: #000000;
+}
+
+.error {
+  border: 2px solid red;
+  background-color: red;
+  box-shadow: 0 0 1px rgba(255, 0, 0, 0.25);
+  color: #fff;
+}/*# sourceMappingURL=style.css.map */

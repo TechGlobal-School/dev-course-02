@@ -1,0 +1,57 @@
+@use "./variables" as *;
+// @use "./variables2" as v2;
+@use "./mixins" as *;
+
+body {
+  font-family: $font;
+  line-height: $lineHeight;
+}
+
+h1 {
+  color: $headingColor;
+}
+
+p {
+  color: $primaryColor;
+}
+
+/* -----  NESTING ----- */
+nav {
+  background-color: lightgray;
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    li {
+      padding: 10px;
+      font-weight: bold;
+    }
+  }
+}
+
+/* -----  EXTENDS/INHERITENCE ----- */
+// shared css
+%shared-message {
+  padding: 10px 20px;
+  color: #333;
+}
+// this is not used
+%not-used {
+  background-color: black;
+}
+
+.success {
+  border: 2px solid green;
+  @extend %shared-message;
+  @include myTheme;
+}
+.warning {
+  border: 2px solid yellow;
+  @extend %shared-message;
+  @include myTheme(yellow, #000000);
+}
+.error {
+  border: 2px solid red;
+  @extend %shared-message;
+  @include myTheme(red, #fff);
+}
