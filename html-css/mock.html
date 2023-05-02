@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      a {
+        font-size: 14px;
+        transition: font-size 4s 1s;
+      }
+      a:hover {
+        transition: margin-right 4s;
+      }
+
+      #box {
+        background-color: antiquewhite;
+        width: calc(200px - 100px);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <h1>Mock</h1> -->
+
+    <h1>The noscript element</h1>
+
+    <p>
+      A browser with JavaScript disabled will show the text inside the noscript
+      element ("Hello World!" will not be displayed).
+    </p>
+
+    <script>
+      document.write("Hello World!");
+    </script>
+    <noscript>Sorry, your browser does not support JavaScript!</noscript>
+
+    <br />
+    <br />
+
+    <a class="target">Hover over me</a>
+
+    <div id="box">BOX</div>
+  </body>
+</html>
