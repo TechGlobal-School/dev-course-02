@@ -219,9 +219,120 @@ article.innerHTML += "<span>This appended text</span>"; // append via innerHTML
 // textContent vs innerText vs innerHTML
 console.log(article.innerHTML); // <p>This is a text</p><span>This appended text</span>
 console.log(article.textContent); // This is a textThis appended text
-console.log(article.innerText); 
+console.log(article.innerText);
 /*
 This is a text
 
 This appended text
 */
+
+/* -------  CREATE AN ELEMENT------- */
+
+// createElement
+
+const divEl = document.createElement("div");
+const textNode = document.createTextNode("This text is coming from javascript");
+
+/*
+divEl.textContent = textNode; // not working
+divEl.innerText = textNode; // not working
+divEl.innerHTML = textNode; // not working
+*/
+
+// divEl.appendChild("Hello world"); // error => text is not a node
+// divEl.appendChild(textNode); // working fine
+
+// divEl.append("Hello world"); // working fine
+divEl.append(textNode); // working fine
+
+console.log(divEl); // <div></div>
+console.log(textNode); // "This text is coming from javascript"
+
+const node = divEl.append(textNode);
+console.log(node); // undefined
+
+const node2 = divEl.appendChild(textNode);
+console.log("node2", node2); // This text is coming from javascript
+
+// append my newly created element to body
+// we created bodyEl on top of the file
+divEl.style.color = "#000";
+divEl.style.padding = "20px 0";
+divEl.style.fontSize = "20px";
+
+bodyEl.append(divEl);
+
+// without createTextNode
+const footer = document.createElement("footer");
+footer.innerHTML = `<p>This is footer</p>`;
+footer.style.borderTop = "2px solid";
+
+bodyEl.append(footer);
+
+/* -------  EVENT HANDLERS ------- */
+
+const myInput = document.querySelector(".customerName");
+const myBtn = document.querySelector(".btn");
+const myBtn2 = document.querySelector(".btn2");
+
+// give click event to button
+
+// const listenClick = (event) => {
+//   event.preventDefault();
+//   console.log("button clicked!");
+// };
+// myBtn.addEventListener("click", listenClick);
+// myBtn.addEventListener("click", function (event) {
+//   event.preventDefault();
+//   console.log("button clicked!");
+// });
+
+// myBtn.addEventListener("click", (event) => {
+//   event.preventDefault();
+//   console.log("button clicked!");
+// });
+
+// give event to input
+
+// waits for user to finish typing
+// myInput.addEventListener("change", () => {
+//   console.log("input updating");
+// });
+
+// doesn't wait
+// myInput.addEventListener("input", () => {
+//   console.log("input updating");
+// });
+
+// myInput.addEventListener("input", (event) => {
+//   //   console.log(event);
+//   //   console.log(event.target);
+//   console.log(event.target.value);
+// });
+
+// ------------------------
+// Too see an effect: click submit more than 2 times
+// Then click 1 time cancel button
+// Lastly click submit button again and see event is not working
+
+let toggle = false;
+
+function focusListener(event) {
+  event.preventDefault();
+  bodyEl.style.background = toggle ? "lightgray" : "lightgreen";
+
+  toggle = !toggle;
+}
+
+myBtn.addEventListener("click", focusListener, false);
+
+// removeEventListener
+myBtn2.addEventListener("click", (event) => {
+  event.preventDefault();
+  myBtn.removeEventListener("click", focusListener, false);
+});
+
+// mouseover body
+// bodyEl.addEventListener("mouseover", (event) => {
+//   console.log(window.scrollX, window.scrollY);
+// });
