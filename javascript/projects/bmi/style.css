@@ -1,0 +1,36 @@
+main {
+  width: 600px;
+  text-align: center;
+  margin: 10px auto;
+  border: 1px solid;
+  padding: 10px;
+}
+hr {
+  height: 2px;
+  background-color: rgb(191, 190, 190);
+  border: none;
+}
+
+form {
+  /* border: 1px solid; */
+  margin-top: 20px;
+  padding: 10px;
+}
+input,
+button {
+  padding: 10px;
+  border: 2px solid lightgreen;
+}
+
+.guide {
+  /* border: 1px solid red; */
+  max-width: 250px;
+  margin: 0 auto;
+}
+h4 {
+  margin-bottom: 5px;
+}
+
+#error {
+  color: red;
+}
