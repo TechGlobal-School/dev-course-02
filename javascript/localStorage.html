@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      span {
+        color: red;
+      }
+      button {
+        background-color: white;
+        padding: 10px;
+        border: 1px solid gray;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>LocalStorage Example</h1>
+
+    <h2>My name is: <span id="name">Joe</span></h2>
+
+    <button id="btn">Change name</button>
+    <button id="btn2">Clear localStorage</button>
+    <button id="btn3">Remove userName from localStorage</button>
+    <script>
+      const nameSpan = document.querySelector("span");
+      const changeBtn = document.querySelector("#btn");
+      const clearBtn = document.querySelector("#btn2");
+      const removeBtn = document.querySelector("#btn3");
+
+      // Set name from localStorage
+      // if localStorage doesn't have a userName set it to 'Joe'
+      nameSpan.textContent = localStorage.getItem("userName")
+        ? localStorage.getItem("userName")
+        : "Joe";
+
+      // change
+      changeBtn.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        localStorage.setItem("userName", "Julie");
+        nameSpan.textContent = localStorage.getItem("userName");
+      });
+
+      // remove
+      removeBtn.addEventListener("click", () => {
+        localStorage.removeItem("userName");
+      });
+
+      localStorage.setItem("randomKey", "delete it with clear");
+      // clear
+      clearBtn.addEventListener("click", () => {
+        localStorage.clear();
+      });
+    </script>
+  </body>
+</html>
