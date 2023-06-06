@@ -1,3 +1,4 @@
+// node imports changed
 const path = require("node:path");
 const fs = require("node:fs/promises");
 const process = require("process");
@@ -19,31 +20,24 @@ const filePath = path.resolve(process.cwd() + "/file.txt");
 
 readFile(filePath);
 
-// node imports changed
-// ex: from 'http' to 'node:path'
-
-/** Simple node server **/
-
-// create a server
-
-// host, port, http
-
+/** -- Simple node server -- **/
 const http = require("http");
 
 const PORT = 8080; // 8000, 5000
 
+// Create a server
 const server = http.createServer((request, response) => {
-  // simple text
+  // send simple text
   //   response.writeHead(200, { "Content-Type": "plain/text" });
   //   response.end("This text coming from node server");
 
-  // json
+  // send json
   //   response.writeHead(200, { "Content-Type": "application/json" });
   //   response.end(
   //     JSON.stringify({ message: "This text coming from node server" })
   //   );
 
-  // html
+  // send html
   response.writeHead(200, { "Content-Type": "text/html" });
   response.end("<h1>This text coming from node server</h1>");
   //   const htmlPath = path.resolve(process.cwd() + "/index.html");
@@ -54,5 +48,8 @@ const server = http.createServer((request, response) => {
 
 server.listen(PORT, () => console.log(`Node server is listening on ${PORT}`));
 
+// TO TEST ==>
 // On terminal
 // hit: curl http://localhost:8080
+// On Browser
+// visit: http://localhost:8080
