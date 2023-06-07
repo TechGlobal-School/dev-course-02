@@ -1,0 +1,43 @@
+<h1>Welcome to Dashboard</h1>
+
+
+<div>
+    {{!-- if else --}}
+    {{#if isAdmin}}
+        <p>Employee Salary: $50 000</p>
+        {{else}}
+        <p>You need to be an admin to see this data!</p>
+    {{/if}}
+
+    {{!-- object --}}
+    {{ceo.firstName}} {{ceo.lastName}}
+    
+    <hr>
+
+    {{!-- with --}}
+    {{#with ceo}}
+        {{firstName}} {{lastName}}
+    {{/with}}
+
+    <hr>
+    {{!-- each --}}
+    {{#each employees}}
+        <p>{{this.name}} | {{this.email}}</p>
+ 
+    {{/each}}
+    
+    <hr>
+    {{#each employees}}
+        {{#with this}}
+           <p>{{name}} | {{email}}</p>
+        {{/with}}
+    {{/each}}
+
+    {{!-- nested each --}}
+    {{#each partners}}
+        <p>{{this.name}} | {{this.email}}</p>
+        {{#each this.companies}}
+            <p>{{this}}</p>
+        {{/each}}
+    {{/each}}
+</div>
