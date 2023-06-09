@@ -1,0 +1,25 @@
+<h1>Search GIF's using Tenor API</h1>
+
+<div>
+    <p><a href="http://localhost:5050/random">Go to random gifs</a></p>
+    <p><a href="http://localhost:5050/suggestions">Go to suggested gifs</a></p>
+</div>
+<form action="/">
+    <input type="text" name="term">
+    <button type="submit">Search</button>
+</form>
+
+{{#if error}}
+<p>{{error}}</p>
+{{/if}}
+
+{{#each gifs}}
+   <div>
+    {{this.content_description}} <br>
+    {{this.itemurl}}<br>
+    {{this.url}}<br>
+    {{this.created}}<br>
+    <img src={{this.itemurl}} alt={{this.content_description}}>
+    <hr>
+   </div>    
+{{/each}}
