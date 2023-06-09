@@ -22,7 +22,6 @@ app.set("views", "./views"); // you can rename views folder here
 // Route
 app.get("/", (req, res) => {
   const { term } = req.query;
-  console.log("term", term);
 
   //   Simple error handling
   if (!term || term.length === 0) {
@@ -31,7 +30,17 @@ app.get("/", (req, res) => {
   if (term) {
     Tenor.Search.Query(term, "2")
       .then((GIFs) => {
-        //   console.log(GIFs);
+        /*
+        TenorJS v1.0.10 includes small patches to ensure 
+        the wrapper doesn't break following the release 
+        of Tenor's V2 API. TenorJS v2 will be coming soon
+
+        Simple workaround until tenorjs v2 comes out 
+        */
+        GIFs.forEach((gif) => {
+          gif.itemurl = gif.itemurl + ".gif";
+        });
+        /* Simple workaround until tenorjs v2 comes out */
         res.render("home", { gifs: GIFs });
       })
       .catch((err) => {
@@ -57,9 +66,3 @@ app.get("/suggestions", (req, res) => {
 app.listen(5050, () => {
   console.log("Running on 5050!!!");
 });
-
-// Starter code
-// CRUD
-// Connect to DB
-// auth
-// cookie
